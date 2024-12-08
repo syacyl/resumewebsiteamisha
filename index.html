@@ -1,0 +1,630 @@
+<html>
+<head>
+  <title>Home</title>
+  <style>
+ 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .wrapper {
+      min-height: 100vh; /* Ensures full viewport height */
+      display: flex;
+      flex-direction: column; /* Stack header, content, and footer vertically */
+    }
+
+
+    .header {
+      background-color: #CBD2A4; /* Header background color */
+      display: flex; /* Flexbox for horizontal layout */
+      justify-content: space-between; /* Space between header items */
+      align-items: center; /* Center items vertically */
+      padding: 10px 30px; /* Padding around header content */
+      border-bottom: 1px solid grey;
+    }
+
+    .header .title-container {
+      font-size: 15px;
+      font-weight: bold;
+      color: #597445;
+      line-height: 1.2;
+      max-width: 300px;
+    }
+
+    .header .center-title {
+      flex-grow: 2; 
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #1A5319;
+      font-family: papyrus;
+      margin-top: 15px;
+    }
+
+    .header .menu {
+      display: flex; 
+      gap: 20px; 
+    }
+
+    .header .menu a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #666;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .header .menu a:hover {
+      color: #000;
+    }
+
+    .menu a.current-page {
+      font-weight: bold;
+      color: #000;
+    }
+
+.center-title {
+  display: flex; /* Flexbox for positioning */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center picture and title horizontally */
+  position: relative; /* Allows precise positioning of the clock container */
+}
+
+
+.clock {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #1A5319;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+.clock-container {
+  position: absolute;
+  display: inline-block; 
+  top: 40px;
+  right:100px;
+  background-image: linear-gradient(to right, #6A9C89, #C4DAD2); 
+  border: 2px solid #597445; 
+  border-radius: 20px; 
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  animation: float 1s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+.clock, .date {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.date {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #16423C;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.center-title img {
+  border-radius: 50%; 
+  border: 2px solid #000; 
+  width: 150px; 
+  height: 150px;
+  object-fit: cover; 
+  
+}
+
+    /* Content Section */
+    .content-container {
+      flex: 1; 
+      display: flex; 
+      align-items: center;
+      gap: 20px; 
+      padding: 30px;
+      background-color: #E9EED9;
+     background-image: url('bgindex.jpeg');
+      text-align: center;
+      justify-content: center;
+     
+ }
+     
+
+    /* Image Styling */
+    .content-container img {
+      width: 35%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    /* Text Styling */
+    .content-container .text {
+      width: 50%;
+      font-size: 15px;
+      color: #16423C;
+      line-height: 1.5;
+      background-color: #9CA986;
+      border: 2px solid #597445;
+      border-radius: 10px;
+      text-align: justify;
+      padding: 20px;
+      margin: 0 auto;
+      box-shadow: 0 30px 10px rgba(0, 0, 0, 0.2);
+      
+    }
+
+   .content-container {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); 
+  transition: transform 1.0s ease-out, opacity 1.0s ease-out;
+}
+
+.content-container.slide-in {
+  transform: translateX(0);
+  opacity: 1; 
+}
+
+    /* Footer Section */
+    .footer {
+      background-color: #CBD2A4; 
+      color: #444; 
+      text-align: center; 
+      padding: 20px 0; 
+      border-top: 1px solid #ccc; 
+      position: static; 
+      clear: both; 
+      width: 100%; 
+      margin: 0; 
+      box-sizing: border-box; 
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto; 
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex; 
+      justify-content: center;
+      align-items: center; 
+      gap: 10px; 
+      margin-top: 15px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #000; 
+    }
+
+    .footer-links img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* Profile Container Styling */
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    /* Profile Picture Styling */
+    .profile-container img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid black;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* Welcome Text Styling */
+    .profile-container h2 {
+      font-size: 24px;
+      color: #444;
+      margin: 0;
+    }
+
+.highlights-section {
+  padding: 30px;
+  background-color: #E9EED9;
+  text-align: center;
+  font-family: monospaced;
+ background-image: url('bgindex.jpeg');
+
+}
+
+.highlight-card {
+  display: block;
+  text-decoration: none; 
+  background-color: #85A98F;
+  border: 1px solid #CBD2A4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: arial;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.highlight-card p {
+  font-size: 14px;
+  color: white;
+}
+
+.highlight-card:focus {
+  outline: 2px solid #CBD2A4; /* Add focus indicator for accessibility */
+}
+
+ .highlights-title {
+      font-size: 25px;
+      margin: 0;
+      text-align: center;
+    }
+
+.tilt-effect {
+  display: block; /* Ensures proper layout */
+  margin: 20px auto; /* Center the image */
+  max-width: 300px; /* Set a maximum width for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for the tilt effect */
+  transform-origin: center center; /* Ensures tilt occurs from the center */
+}
+
+.tilt-effect:hover {
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg); /* Apply tilt effect */
+  cursor: pointer; /* Makes it interactive */
+}
+
+/* Flip Card Container */
+.flip-card {
+  width: 200px;
+  height: 200px; /* Adjust to a square for round image */
+  perspective: 1000px; 
+  display: inline-block;
+  position: relative;/* Gives a 3D effect */
+  margin: 20px;
+}
+
+/* Inner part of the Flip Card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s; /* Smooth flip transition */
+  transform-style: preserve-3d;
+  transform-origin: center; /* Ensure children are in 3D space */
+}
+
+/* Flip the card when hovering */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Rotates the card by 180 degrees */
+}
+
+/* Front of the Card (Profile Image) */
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Ensures front is hidden when flipped */
+  border-radius: 50%; /* Make the front side circular */
+  overflow: hidden; /* Ensures no overflow from the image */
+  border: 2px solid black;
+}
+
+/* Back of the Card */
+/* Flip Card Back */
+.flip-card-back {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid black; /* Border can be kept or removed */
+  position: absolute; /* Ensure it stays within the container */
+  background-color: #47663B;
+  color: white;
+  text-align: center;
+  transform: rotateY(180deg); /* Initially hides the back by rotating it */
+  backface-visibility: hidden; /* Ensures back is hidden when flipped */
+  display: flex;
+  justify-content: center; /* Centers the content */
+  align-items: center; /* Centers the content */
+  transform-origin: center; /* Ensures the card flips around its center */
+}
+
+.flip-card-back p {
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Remove default padding */
+}
+
+.quote-container {
+  position: absolute; /* Keeps it absolutely positioned */
+  top: 100px; /* Vertical position */
+  left: 40px; /* Horizontal position */
+  width: 25%; /* Reduce the width for a smaller container */
+  background-image: linear-gradient(to right, #6A9C89, #C4DAD2);
+  border: 2px solid #597445; /* Darker green border */
+  border-radius: 15px; /* Adjust rounded corners */
+  padding: 8px; /* Less padding for a smaller look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  text-align: center;
+  font-size: 10px; /* Smaller text size */
+  font: italic;
+  animation: float 1s ease-in-out infinite; /* Floating effect */
+}
+
+#quote-of-the-day {
+  font-size: 15px;
+  font-style: italic;
+  color: #2c3e50;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu that will appear when hovered */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 83px;
+  max-width: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  transition: font-size 0.3s ease;
+  display: block;
+  font-size: 1px;
+
+}
+
+
+.dropdown-content a:hover {
+  background-color: #B3C8CF;
+  font-size: 13px;
+}
+
+/* Show the dropdown when hovering over the Gallery link */
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-size: 12px;
+}
+
+
+</style>
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="title-container">
+        <h1>Amisha Hazreen Amirhyde</h1>
+        <p>IMD318 - JCDIM1105A</p>
+      </div>
+
+      <div class="center-title">
+        <h2>My Personal Website</h2> </div>
+<br>
+
+      <div class="menu">
+        <a href="resumewebsite.html" class="current-page">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="aboutme.html#Education">Education</a>
+        <a href="aboutme2.html#Family"> Family </a>
+ <div class="dropdown">
+        <a href="gallery2.html">Gallery</a>
+<div class="dropdown-content">
+        <a href="gallery3.html"> Education Gallery </a>
+        <a href="familygaller.html"> Family Gallery </a>
+         
+      </div>
+    </div>
+   </div>
+  </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+
+<div class="quote-container">
+  <p id="quote-of-the-day">"Eighty percent of success is showing up." – Woody Allen</p>
+</div>
+
+      <div class="profile-container">
+<div class="clock-container">
+       <div class="clock" id="clock">Loading time...</div>
+        <div class="date" id="date" >Loading time... </div>
+      </div>
+         
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     
+        <img src="gambar saya.jpg" alt="gambar saya">
+       </div>
+<div class="flip-card-back">
+      <h3></h3>
+     <a href="aboutme.html" style="text-decoration: none; color: white;">
+      <p>Click to know more 'About Me' ! </p> </a>
+    </div>
+  </div>
+</div>
+         <br>
+         <h2 style="font-family: monospaced";>  Welcome to my website! </h2> 
+         <br>
+        <div class="text">
+          <p>Hello everyone! My name is Amisha Hazreen, and welcome to my personal website. I am currently studying in Diploma of Information Management in UiTM. I am also currently conducting an individual project for subject IMD318. I enjoy exploring web design, learning new skills, and creating engaging projects. This platform showcases my biodata, experiences and journey. Feel free to explore too! </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="highlights-section">
+      <h3 class="highlights-title">Highlights</h3>
+
+ <a href="aboutme.html" class="highlight-card">
+    <h4>About Me</h4>
+    <p>If you want to learn more about me, click here!</p>
+  </a>
+
+  <!-- Highlight Card 2 -->
+  <a href="aboutme.html#Education" class="highlight-card">
+    <h4>Education</h4>
+    <p>Check out my education journey!</p>
+  </a>
+
+  <!-- Highlight Card 3 -->
+  <a href="gallery2.html" class="highlight-card">
+    <h4>Gallery</h4>
+    <p>Explore my collection of memorable moments captured in photos.</p>
+  </a>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2024 Amisha Hazreen Amirhyde. All Rights Reserved.</p>
+      <br>
+      <p>Connect with me:</p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank">
+          <img src="fb logo.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/syaesiurc/" target="_blank">
+          <img src="insta logo.png" alt="instagram">
+        </a>
+        <a href="https://www.youtube.com/@amishahazreen7060" target="_blank">
+          <img src="yt logo.png" alt="youtube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Function to Update the Clock
+    function updateClock() {
+      const now = new Date(); // Get current date and time
+      const hours = String(now.getHours()).padStart(2, '0'); // Add leading zero if needed
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const timeString = `${hours}:${minutes}:${seconds}`; // Format the time
+      document.getElementById('clock').textContent = timeString; // Display the time
+    }
+
+    // Update the Clock Every Second
+    setInterval(updateClock, 1000);
+
+    // Initialize Clock Immediately
+    updateClock();
+
+window.addEventListener("load", () => {
+  const content = document.querySelector(".content-container");
+  content.classList.add("slide-in");
+});
+
+// Function to Update the Clock and Date
+function updateClockAndDate() {
+  const now = new Date(); // Get current date and time
+
+  // Format Time (hh:mm:ss)
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+
+  // Format Date (Day, dd Month yyyy)
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+  const day = days[now.getDay()]; // Get the current day name
+  const date = now.getDate(); // Get the day of the month
+  const month = months[now.getMonth()]; // Get the month name
+  const year = now.getFullYear(); // Get the year
+
+  const dateString = `${day}, ${date} ${month} ${year}`; // Combine the date string
+
+  // Update the HTML content
+  document.getElementById('clock').textContent = timeString;
+  document.getElementById('date').textContent = dateString;
+}
+
+// Update the Clock and Date Every Second
+setInterval(updateClockAndDate, 1000);
+
+// Initialize Clock and Date Immediately
+updateClockAndDate();
+
+
+
+  </script>
+</body>
+</html>

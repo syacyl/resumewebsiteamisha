@@ -1,0 +1,389 @@
+<html>
+<html>
+<head>
+  <title>Gallery</title>
+  <style>
+    body {
+      background-color: #E5E1DA;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+    }
+
+    /* Header Styles */
+    .header {
+      background-color: #CBD2A4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      border-bottom: 1px solid grey;
+    }
+
+    .header .title-container {
+      font-size: 15px;
+      font-weight: bold;
+      color: #597445;
+      margin: 3;
+      line-height: 1;
+      word-wrap: break-word;
+      max-width: 300px;
+    }
+
+    .header .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header .menu a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #666;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .header .menu a:hover {
+      color: #000;
+    }
+
+    /* Content Section with Background */
+    .content-container {
+      flex: 1;
+      background-image: url('bggridddd.jpeg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .image-item {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-item img {
+      width: 250px;
+      height: 250px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      transition: transform 0.4s ease, box-shadow 0.3s ease; 
+    }
+
+    .image-item img:hover {
+  transform: scale(1.1) translateY(-10px); /* Slightly enlarge and lift the image */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a 3D effect */
+}
+
+    .image-item p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: black;
+    }
+
+    .menu a.current-page {
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #CBD2A4;
+      color: #444; 
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #ccc; 
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+   .footer p {
+      margin: 0; 
+      font-size: 14px; 
+    }
+
+    .footer-links {
+      display: flex; 
+     justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+   margin-top: 15px;
+}
+
+    .footer-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #000; 
+    }
+ .footer-links img {
+  width: 30px;
+  height: 30px; 
+  object-fit: contain;
+}
+
+.content-container h2 {
+  text-align: center; /* Center-aligns the header */
+  font-size: 24px; /* Adjust the size as needed */
+  margin-bottom: 20px; /* Adds spacing between the header and images */
+  color: #006A67; /* Matches other headings if applicable */
+}
+
+  
+   .video-container {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: contain; /* Ensure videos are scaled to fit the container */
+  aspect-ratio: 16 / 9; /* Maintain a consistent aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container video:hover {
+  transform: scale(1.05) translateY(-10px); /* Slightly enlarge and lift the video */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #629584;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #387478;
+}
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="title-container">
+      <h1>Gallery</h1>
+    </div>
+    <div class="center-title"></div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About</a>
+      <a href="aboutme.html#Education">Education</a>
+      <a href="gallery2.html" class="current-page">Gallery</a>
+    </div>
+  </div>
+
+     
+      
+  <!-- Content Section -->
+    
+  <div class="content-container">
+     
+    <h2> <marquee>  Family Gallery </marquee></h2>
+
+    <div class="image-container"> 
+      
+      <div class="image-item">
+
+        <img src="family1.jpg" alt="gambar i" >
+        
+      </div>
+      <div class="image-item">
+        <img src="family3.jpg" alt="taylor">
+        
+      </div>
+      <div class="image-item">
+        <img src="family19.jpg" alt="taylor">
+       
+      </div>
+      <div class="image-item">
+        <img src="family6.jpg" alt="taylor">
+        
+      </div>
+      <div class="image-item">
+        <img src="family8.jpg" alt="taylor">
+     
+      </div>
+      <div class="image-item">
+        <img src="family7.jpg" alt="taylor">
+       
+      </div>
+      <div class="image-item">
+        <img src="family2.jpg" alt="taylor">
+       
+      </div>
+      <div class="image-item">
+        <img src="family9.jpg" alt="taylor">
+    
+      </div>
+       <div class="image-item">
+        <img src="family14.jpg" alt="taylor">
+        
+      </div>
+           <div class="image-item">
+        <img src="family12.jpg" alt="taylor">
+        
+      </div>
+          <div class="image-item">
+        <img src="sibs.jpg" alt="taylor">
+        
+      </div>
+          <div class="image-item">
+        <img src="family10.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family11.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="cuz.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family16.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family17.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family18.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family4.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family20.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family22.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family13.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="family24.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="kawann.jpg" alt="taylor">
+     
+      </div>
+
+<div class="image-item">
+        <img src="misha.jpg" alt="taylor">
+     
+      </div>
+
+  <div class="video-container">
+          <video autoplay loop muted controls>
+            <source src="vid5.mp4" type="video/mp4">
+          </video>
+
+</div>
+    
+<div class="video-container">
+          <video autoplay loop muted controls>
+            <source src="vid4.mp4" type="video/mp4">
+          </video>
+
+</div>
+    
+<div class="video-container">
+          <video autoplay loop muted controls>
+            <source src="vid6.mp4" type="video/mp4">
+          </video>
+
+</div>
+
+<div class="video-container">
+          <video autoplay loop muted controls>
+            <source src="vid8.mp4" type="video/mp4">
+          </video>
+
+</div>
+    </div>
+
+<a href="aboutme2.html" class="button">Back</a>
+  </div>
+
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2024 Amisha Hazreen Amirhyde. All Rights Reserved.</p>
+       <br>
+      <p> Connect with me: </p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank"> 
+             <img src="fb logo.png" alt="facebook"> </a>
+        <a href="https://www.instagram.com/syaesiurc/" target="_blank">
+               <img src="insta logo.png" alt="instagram"> </a>
+        <a href="https://www.youtube.com/@amishahazreen7060" target="_blank">
+                 <img src="yt logo.png" alt="youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

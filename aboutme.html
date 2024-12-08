@@ -1,0 +1,632 @@
+<html>
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<title>About</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.header {
+  background-color: #CBD2A4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid grey;
+}
+
+.header .title-container {
+  font-size: 15px;
+  font-weight: bold;
+  color: #597445;
+}
+
+.header .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header .menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #666;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header .menu a:hover {
+  color: #000;
+}
+
+/* Content Section with Background */
+.content-container {
+  min-height: 90vh;
+  background-image: url('bgabout.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-container h1 {
+  font-size: 30px;
+  margin: 0 0 -5px 0;
+  color: #006A67;
+  font-family: terminus;
+}
+
+.content-container h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  color: black;
+  font-family: Times New Roman, serif;
+}
+
+.textbox {
+  width: 700px; 
+  height: 300px; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.inner-shape {
+  width: 500px;
+  height: 200px;
+  background-color: #D6EFD8; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.text {
+  font-size: 15px;
+  color: #16423C;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #629584;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #387478;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #CBD2A4;
+  color: #444;
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 1px solid #ccc; 
+  position: relative; 
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: auto;
+}
+
+.footer p {
+  margin: 0; 
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #000; 
+}
+
+.footer-links img {
+  width: 30px; 
+  height: 30px; 
+  object-fit: contain;
+}
+
+.subheader {
+   width: 1263px; 
+   height: 100px; 
+   background-image: linear-gradient(to right, #CBD2A4, #629584);
+   text-align: center;
+  font-family: monospaced;
+  font-size: 20px;
+display: flex;
+  justify-content: center; 
+  align-items: center;
+ color: #3D5300;
+  
+}
+
+.subheader i {
+  margin-right: 0px;
+  font-size: 20px; 
+  color: #FFE31A; 
+  justify-content: center;
+}
+ 
+.textboxx {
+  width: 90%; 
+  max-width: 1263px;
+  height: 500px; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.textboxxx {
+  width: 60%; 
+  max-width: 1263px;
+  height: auto; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-point {
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-content {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease; 
+}
+
+  .timeline-content:hover {
+  transform: scale(1.1) translateY(-10px); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.timeline-content h3 {
+  font-size: 16px;
+  color: #006A67;
+}
+
+.timeline-content h4 a {
+  font-size: 16px;
+  color: #006A67;
+  text-decoration: none;
+}
+
+.timeline-content h4  {
+  font-size: 16px;
+  color: #006A67;
+  
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+ 
+.timeline-image-container {
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.timeline-image {
+  max-width: 100px; 
+  height: auto; 
+  display: inline-block; 
+}
+
+/* Table Styling */
+.styled-table {
+  width: 60%; 
+  border-collapse: collapse;
+  font-size: 14px; 
+  text-align: left; 
+  color: #16423C; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.styled-table tbody tr {
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.styled-table tbody tr:hover {
+  opacity: 1;
+  transform: scale(1.02); 
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  border: 2px solid black;
+   background-color: #DBE7C9; 
+}
+
+.styled-table thead th {
+  background-color: #294B29; 
+  color: #fff; 
+  font-weight: bold; 
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #DBE7C9; /* Light gray for alternate rows */
+}
+
+.styled-table tbody tr:hover {
+  background-color: #ADBC9F; /* Highlight row on hover */
+}
+
+.textboxxx h4 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.timeline-event a .timeline-point {
+  transition: transform 0.3s ease;
+}
+
+.timeline-event a:hover .timeline-point {
+  transform: scale(1.2); /* Slightly enlarges the point */
+  background-color: #ff6347; /* Changes color on hover */
+  cursor: pointer;
+}
+
+ .menu a.current-page {
+      font-weight: bold;
+      color: #000;
+    }
+
+.floating-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  animation: float 2s ease-in-out infinite; /* Apply the floating animation */
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px); /* Initial position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up */
+  }
+  100% {
+    transform: translateY(0px); /* Return to initial position */
+  }
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu that will appear when hovered */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 83px;
+  max-width: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  transition: font-size 0.3s ease;
+  display: block;
+  font-size: 1px;
+
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #B3C8CF;
+  font-size: 13px;
+}
+
+/* Show the dropdown when hovering over the Gallery link */
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-size: 12px;
+}
+
+.subheader a {
+  color: #355F2E; /* Change the text color */
+  text-decoration: none; /* Remove the underline */
+}
+
+.subheader a:hover {
+  color: #004B47; /* Optional: Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+</style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="title-container">
+      <h1>About</h1>
+    </div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html" class="current-page">About</a>
+      <a href="aboutme.html#Education"> Education</a>
+      <a href="aboutme2.html#Family">Family</a> 
+<div class="dropdown">
+      <a href="gallery2.html">Gallery</a>
+<div class="dropdown-content">
+<a href="aboutme.html#Education"> Education Gallery </a>
+        <a href="familygaller.html"> Family Gallery </a>
+      
+      
+    </div>
+  </div>
+</div>
+</div>
+
+  
+ <div class= "subheader"> 
+<a href="#About Me" > About Me </a>  &nbsp;&nbsp; 
+      <i class= "fas fa-star"></i>  &nbsp;&nbsp;  
+    <a href= "#Education">Education</a> &nbsp;&nbsp; 
+       <i class="fas fa-star"></i>  &nbsp;&nbsp;  
+    <a href= "#Experience">Experience</a> </h2></div>  
+
+
+  <!-- Content Section -->
+  <div class="content-container">
+    <h2 id="About Me">About Me</h2>
+    <img class="floating-img" src="mypic.jpg" alt="saya" style="display: block; margin: 20px auto; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);">  
+
+    <div class="textbox">
+      <div class="inner-shape">
+        <div class="text">
+          <p>Described myself as an <i>ambivert</i> here I enjoy my quiet moments but also love meeting new people and connecting with them. I have a mix of tastes when it comes to lifestyle, music, movies, and so much more! Click 'Read More' to explore more about me~</p>
+        </div>
+        <a href="aboutme2.html" class="button">Read More</a>
+      </div>
+    </div>
+
+        <h2 id="Education">Education</h2>
+           <div class="textboxx">
+             <div class="timeline">
+    <div class="timeline-event">
+      <div class="timeline-point">
+     </div>
+      <div class="timeline-content">
+
+        <h3>Kindergarten</h3>
+ <div class="timeline-image-container">
+        <img src="logoosara.png" alt="skbsa" class="timeline-image">
+           </div>
+
+            <h4> Sara Kinderschool </h4>
+        <p>Started my education in Sara Kinderschool from 2009-2010. My</p>
+      </div>
+    </div>
+
+
+    <div class="timeline-event">
+      <div class="timeline-point"></div>
+      <div class="timeline-content">
+        <h3>Elementary School</h3>
+
+ <a href="gallery3.html" target="_blank">
+        <div class="timeline-image-container">
+        <img  src="logooskbsa.png" alt="skbsa" class="timeline-image">
+           </div>
+</a>
+          <h4> <a href="https://www.google.com/maps/place/Sekolah+Kebangsaan+Bandar+Seri+Alam,+Bandar+Baru+Seri+Alam,+81750+Masai,+Johor/@1.5062648,103.8834405,17z/data=!3m1!4b1!4m6!3m5!1s0x31da6af1bbaae541:0x332147c41b87c5e2!8m2!3d1.5062648!4d103.8834405!16s%2Fg%2F122lq2gd?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">SK Bandar Seri Alam </a></h4>
+        <p> Continuing my education journey through elementary school in SKBSA from 2011-2016.</p>
+      </div>
+    </div>
+
+
+
+    <div class="timeline-event">
+<a href="gallery3.html">
+      <div class="timeline-point"></div>
+</a>
+      <div class="timeline-content">
+        <h3>High School</h3>
+<a href="https://www.google.com/maps/dir//Jalan+Besar+Masai,+Bandar+Baru+Seri+Alam,+81750+Masai,+Johor/@1.4930005,103.7957842,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da6add1fd76ae5:0xb21db39b2dd2cb22!2m2!1d103.8781862!2d1.493002?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" >
+        <div class="timeline-image-container">
+        <img src="logoosmkdptt.png" alt="smkdpt" class="timeline-image">
+           </div>
+</a>
+          <h4> SMK Dato' Penggawa Timur </h4>
+        <p> Continue high school life in SMKDPT from 2017-2021.</p>
+      </div>
+    </div>
+
+
+    <div class="timeline-event">
+      <div class="timeline-point"></div>
+      <div class="timeline-content">
+        <h3>University</h3>
+<a href="https://uitm.edu.my/index.php/en/">
+           <div class="timeline-image-container">
+        <img src="logoouitm.png" alt="smkdpt" class="timeline-image">
+           </div>
+</a>
+          <h4> UiTM </h4>
+
+        <p>Pursuing my study in UiTM in Diploma of Information Management from 2022-now.</p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+ <h2 id="Experience">Experience</h2>
+     <div class="textboxxx">
+     <table> 
+        <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Role</th>
+        <th>Company</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2021</td>
+        <td>Student</td>
+        <td>Didik TV (NTV7)</td>
+        <td>Joined <i>Didik TV</i> on NTV7 as SPM student that take course in <em> <b>Interior Design </em></b>subject for the preparation of SPM </td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td><i>Volunteer</i></td>
+        <td>SGS Company</td>
+        <td>Safety Month 2022 (Cleaning the beach)</td>
+      </tr>
+      <tr>
+        <td>2024</td>
+        <td>Internship</td>
+        <td>LPP Negeri Johor</td>
+        <td>Handling record, managing ingoing and outgoing letters, develop skills on Canva</td>
+      </tr>
+
+
+      
+    
+    </tbody>
+  </table>
+<h4> Click button below to see my gallery to all of the experience I stated above!</h4>
+    <a href="gallery2.html" class="button">Experience Gallery</a>
+      
+    
+    
+</div>
+      
+     
+
+    
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2024 Amisha Hazreen Amirhyde. All Rights Reserved.</p>
+      <br>
+      <p>Connect with me:</p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank"> 
+          <img src="fb logo.PNG" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/syaesiurc/" target="_blank">
+          <img src="insta logo.PNG" alt="instagram">
+        </a>
+        <a href="https://www.youtube.com/@amishahazreen7060" target="_blank">
+          <img src="yt logo.PNG" alt="youtube">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
