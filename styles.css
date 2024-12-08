@@ -1,0 +1,431 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.header {
+  background-color: #CBD2A4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid grey;
+}
+
+.header .title-container {
+  font-size: 15px;
+  font-weight: bold;
+  color: #597445;
+}
+
+.header .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header .menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #666;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header .menu a:hover {
+  color: #000;
+}
+
+/* Content Section with Background */
+.content-container {
+  min-height: 90vh;
+  background-image: url('bgabout.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-container h1 {
+  font-size: 30px;
+  margin: 0 0 -5px 0;
+  color: #006A67;
+  font-family: terminus;
+}
+
+.content-container h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  color: black;
+  font-family: Times New Roman, serif;
+}
+
+.textbox {
+  width: 700px; 
+  height: 300px; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.inner-shape {
+  width: 500px;
+  height: 200px;
+  background-color: #D6EFD8; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.text {
+  font-size: 15px;
+  color: #16423C;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #629584;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #387478;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #CBD2A4;
+  color: #444;
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 1px solid #ccc; 
+  position: relative; 
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: auto;
+}
+
+.footer p {
+  margin: 0; 
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #000; 
+}
+
+.footer-links img {
+  width: 30px; 
+  height: 30px; 
+  object-fit: contain;
+}
+
+.subheader {
+   width: 1263px; 
+   height: 100px; 
+   background-image: linear-gradient(to right, #CBD2A4, #629584);
+   text-align: center;
+  font-family: monospaced;
+  font-size: 20px;
+display: flex;
+  justify-content: center; 
+  align-items: center;
+ color: #3D5300;
+  
+}
+
+.subheader i {
+  margin-right: 0px;
+  font-size: 20px; 
+  color: #FFE31A; 
+  justify-content: center;
+}
+ 
+.textboxx {
+  width: 90%; 
+  max-width: 1263px;
+  height: 500px; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.textboxxx {
+  width: 60%; 
+  max-width: 1263px;
+  height: auto; 
+  background-image: linear-gradient(to right, #387478, #629584);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-point {
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-content {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease; 
+}
+
+  .timeline-content:hover {
+  transform: scale(1.1) translateY(-10px); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.timeline-content h3 {
+  font-size: 16px;
+  color: #006A67;
+}
+
+.timeline-content h4 a {
+  font-size: 16px;
+  color: #006A67;
+  text-decoration: none;
+}
+
+.timeline-content h4  {
+  font-size: 16px;
+  color: #006A67;
+  
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+ 
+.timeline-image-container {
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.timeline-image {
+  max-width: 100px; 
+  height: auto; 
+  display: inline-block; 
+}
+
+/* Table Styling */
+.styled-table {
+  width: 60%; 
+  border-collapse: collapse;
+  font-size: 14px; 
+  text-align: left; 
+  color: #16423C; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.styled-table tbody tr {
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.styled-table tbody tr:hover {
+  opacity: 1;
+  transform: scale(1.02); 
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  border: 2px solid black;
+   background-color: #DBE7C9; 
+}
+
+.styled-table thead th {
+  background-color: #294B29; 
+  color: #fff; 
+  font-weight: bold; 
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #DBE7C9; /* Light gray for alternate rows */
+}
+
+.styled-table tbody tr:hover {
+  background-color: #ADBC9F; /* Highlight row on hover */
+}
+
+.textboxxx h4 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.timeline-event a .timeline-point {
+  transition: transform 0.3s ease;
+}
+
+.timeline-event a:hover .timeline-point {
+  transform: scale(1.2); /* Slightly enlarges the point */
+  background-color: #ff6347; /* Changes color on hover */
+  cursor: pointer;
+}
+
+ .menu a.current-page {
+      font-weight: bold;
+      color: #000;
+    }
+
+.floating-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  animation: float 2s ease-in-out infinite; /* Apply the floating animation */
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px); /* Initial position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up */
+  }
+  100% {
+    transform: translateY(0px); /* Return to initial position */
+  }
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu that will appear when hovered */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 83px;
+  max-width: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  transition: font-size 0.3s ease;
+  display: block;
+  font-size: 1px;
+
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #B3C8CF;
+  font-size: 13px;
+}
+
+/* Show the dropdown when hovering over the Gallery link */
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-size: 12px;
+}
+
+.subheader a {
+  color: #355F2E; /* Change the text color */
+  text-decoration: none; /* Remove the underline */
+}
+
+.subheader a:hover {
+  color: #004B47; /* Optional: Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
